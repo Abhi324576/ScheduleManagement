@@ -36,7 +36,7 @@ MyConnection mcon;
 					r.setUserDOB(rs.getString(3));
 					r.setUserPosition(rs.getString(4));
 					r.setUserEmail(rs.getString(5));
-					r.setStatus(rs.getString(8));
+					r.setStatus(rs.getString(7));
 					list.add(r);
 				}
 			} catch (SQLException e) {

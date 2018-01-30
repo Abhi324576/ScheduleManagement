@@ -3,6 +3,10 @@
     pageEncoding="ISO-8859-1"%>
  <jsp:useBean id="register" class="dto.RegisterDto"></jsp:useBean>
  <jsp:setProperty property="*" name="register"/>
+<%-- <jsp:useBean id="login" class="dto.RegisterDto" scope="session"></jsp:useBean>
+<%
+	if (login != null && login.getUserPosition() != null) {
+%> --%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,3 +21,8 @@ response.sendRedirect("approve.jsp");
 %>
 </body>
 </html>
+<%-- <%
+	} else {
+		response.sendRedirect("index.jsp");
+	}
+%> --%>

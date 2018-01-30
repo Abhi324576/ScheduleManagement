@@ -3,8 +3,11 @@
 <%@page import="dao.ApproveDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<jsp:useBean id="register" class="dto.RegisterDto"></jsp:useBean>
-<jsp:setProperty property="*" name="register"/>
+<%-- <jsp:useBean id="login" class="dto.RegisterDto" scope="session"></jsp:useBean>
+<%
+	if (login != null && login.getUserPosition() != null) {
+%> --%>
+<jsp:setProperty property="*" name="register" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -18,6 +21,7 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript">
 	
+	
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
 		}, false);
@@ -26,6 +30,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			window.scrollTo(0, 1);
 		}
 	
+
 </script>
 <!-- //custom-theme -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css"
@@ -57,15 +62,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					class="icon-bar"></span>
 			</button>
 			<h1>
-				<a class="navbar-brand" href="index.html"><i
+				<a class="navbar-brand" href="adminHome.jsp"><i
 					class="fa fa-crosshairs" aria-hidden="true"></i> Schedule
 					Management System</a>
 			</h1>
 
 		</div>
 		<ul class="agile_forms">
-			<li><a href="logout.jsp">
-					Log Out</a></li>
+			<li><a href="logout.jsp"> Log Out</a></li>
 		</ul>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-right"
@@ -74,12 +78,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="adminHome.jsp"
 					class="hvr-underline-from-center">Home</a></li>
-				<li><a href="adminPage.jsp" class="hvr-underline-from-center" target="_blank">Events</a></li>
-				<li><a href="siteUnderMaintainance.jsp" class="hvr-underline-from-center">Holiday-List</a></li>
-				<li><a href="siteUnderMaintainance.jsp" class="hvr-underline-from-center">Notification</a></li>
+				<li><a href="adminPage.jsp" class="hvr-underline-from-center"
+					target="_blank">Events</a></li>
+				<li><a href="siteUnderMaintainance.jsp"
+					class="hvr-underline-from-center">Holiday-List</a></li>
+				<li><a href="siteUnderMaintainance.jsp"
+					class="hvr-underline-from-center">Notification</a></li>
 				<li><a href="approve.jsp" class="hvr-underline-from-center">Approve-User</a></li>
-				<li><a href="siteUnderMaintainance.html" class="hvr-underline-from-center">Reports</a></li>
-				<li><a href="siteUnderMaintainance.html" class="hvr-underline-from-center">Contact</a></li>
+				<li><a href="siteUnderMaintainance.html"
+					class="hvr-underline-from-center">Reports</a></li>
+				<li><a href="siteUnderMaintainance.html"
+					class="hvr-underline-from-center">Contact</a></li>
 			</ul>
 			</nav>
 
@@ -89,7 +98,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="clearfix"></div>
 	</div>
 	<!-- Modal1 -->
-	
+
 	<div class="banner">
 
 
@@ -118,7 +127,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	<!-- choose-us -->
 
-	
+
 	<!-- //choose-us -->
 
 	<!-- News -->
@@ -131,8 +140,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 					<h4>Treasurer</h4>
-					<img src="images/banner2.jpg" alt="blog-image" /> 
-						
+					<img src="images/banner2.jpg" alt="blog-image" />
+
 				</div>
 			</div>
 		</div>
@@ -162,9 +171,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<img src="images/2.jpg" alt=" " class="img-responsive" />
 					</div>
 					<div class="col-md-6 w3_modal_body_right">
-						<p>
-							
-						</p>
+						<p></p>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -193,14 +200,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<th><font size="3" COLOR="#FFFF99">POSITION</th>
 					<th><font size="3" COLOR="#FFFF99">EMAIL</th>
 					<th><font size="3" COLOR="#FFFF99">STATUS</th>
-					
+
 				</FONT>
 			</tr>
 		</thead>
 		<%
-			ApproveDao ad=new ApproveDao();
-			ArrayList<RegisterDto> list=ad.show();
-			for (RegisterDto r : list) {
+			ApproveDao ad = new ApproveDao();
+				ArrayList<RegisterDto> list = ad.show();
+				for (RegisterDto r : list) {
 		%>
 		<tr bgcolor="#d3d2d1">
 			<td><%=r.getUserId()%></td>
@@ -209,7 +216,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<td><%=r.getUserPosition()%></td>
 			<td><%=r.getUserEmail()%></td>
 			<td><%=r.getStatus()%></td>
-			<th><a href="statusChange.jsp?userEmail=<%=r.getUserEmail() %>"> Approve User</a></th>
+			<th><a href="statusChange.jsp?userEmail=<%=r.getUserEmail()%>">
+					Approve User</a></th>
 		</tr>
 		<%
 			}
@@ -403,3 +411,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //here ends scrolling icon -->
 </body>
 </html>
+<%-- <%
+	} else {
+		response.sendRedirect("index.jsp");
+	}
+%> --%>

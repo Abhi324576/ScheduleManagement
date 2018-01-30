@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%-- <jsp:useBean id="login" class="dto.RegisterDto" scope="session"></jsp:useBean>
+<%
+	if (login != null && login.getUserPosition() != null) {
+%> --%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -13,6 +17,8 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript">
 	
+	
+	
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
 		}, false);
@@ -21,6 +27,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			window.scrollTo(0, 1);
 		}
 	
+
+
 </script>
 <!-- //custom-theme -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css"
@@ -52,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					class="icon-bar"></span>
 			</button>
 			<h1>
-				<a class="navbar-brand" href="index.html"><i
+				<a class="navbar-brand" href="employeeHome.jsp"><i
 					class="fa fa-crosshairs" aria-hidden="true"></i> Schedule
 					Management System</a>
 			</h1>
@@ -67,19 +75,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			id="bs-example-navbar-collapse-1">
 			<nav>
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="index.jsp"
-					class="hvr-underline-from-center">Home</a></li>
-				<li><a href="siteUnderMaintainance.jsp"
-					class="hvr-underline-from-center">Events</a></li>
-				<li><a href="siteUnderMaintainance.jsp"
-					class="hvr-underline-from-center">Holiday-List</a></li>
-				<li><a href="siteUnderMaintainance.jsp"
-					class="hvr-underline-from-center">Notification</a></li>
-				<li><a href="siteUnderMaintainance.jsp"
-					class="hvr-underline-from-center">Reports</a></li>
+				<li class="active"><a href="employeeHome.jsp" class="hvr-underline-from-center">Home</a></li>
+				<li><a href="EmployeePage.jsp"class="hvr-underline-from-center">Events</a></li>
+				<li><a href="HolidayListForStaffs.jsp"class="hvr-underline-from-center">Holiday-List</a></li>
+				<li><a href="siteUnderMaintainance.jsp"class="hvr-underline-from-center">Reports</a></li>
 				<li><a href="feedback.jsp" class="hvr-underline-from-center">Feedback</a></li>
-				<li><a href="siteUnderMaintainance.jsp"
-					class="hvr-underline-from-center">Contact</a></li>
+				<li><a href="siteUnderMaintainance.jsp"class="hvr-underline-from-center">Contact</a></li>
 			</ul>
 			</nav>
 
@@ -96,30 +97,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 
-					<div class="signin-form profile">
-						<h3 class="agileinfo_sign">Sign In</h3>
-						<div class="login-form">
-							<form action="#" method="post">
-								<input type="email" name="email" placeholder="E-mail"
-									required=""> <input type="password" name="password"
-									placeholder="Password" required="">
-								<div class="tp">
-									<input type="submit" value="Sign In">
-								</div>
-							</form>
-						</div>
-						<div class="login-social-grids">
-							<ul>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-rss"></i></a></li>
-							</ul>
-						</div>
-						<p>
-							<a href="#" data-toggle="modal" data-target="#myModal3">
-								Don't have an account?</a>
-						</p>
-					</div>
+
 				</div>
 			</div>
 		</div>
@@ -133,24 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 
-					<div class="signin-form profile">
-						<h3 class="agileinfo_sign">Sign Up</h3>
-						<div class="login-form">
-							<form action="#" method="post">
-								<input type="text" name="name" placeholder="Username"
-									required=""> <input type="email" name="email"
-									placeholder="Email" required=""> <input type="password"
-									name="password" id="password1" placeholder="Password"
-									required=""> <input type="password" name="password"
-									id="password2" placeholder="Confirm Password" required="">
 
-								<input type="submit" value="Sign Up">
-							</form>
-						</div>
-						<p>
-							<a href="#"> By clicking register, I agree to your terms</a>
-						</p>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -167,24 +128,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="sb-description">
 						<h3>Creative Lifesaver</h3>
 					</div></li>
-				<!-- <li> -->
-				<!-- <a href="#"><img src="images/banner2.jpg" alt="image2"/></a> -->
-				<!-- <div class="sb-description"> -->
-				<!-- <h3>Honest Entertainer</h3> -->
-				<!-- </div> -->
-				<!-- </li> -->
-				<!-- <li> -->
-				<!-- <a href="#"><img src="images/banner3.jpg" alt="image1"/></a> -->
-				<!-- <div class="sb-description"> -->
-				<!-- <h3>brave astronaut</h3> -->
-				<!-- </div> -->
-				<!-- </li> -->
-				<!-- <li> -->
-				<!-- <a href="#"><img src="images/banner4.jpg" alt="image1"/></a> -->
-				<!-- <div class="sb-description"> -->
-				<!-- <h3>Affectionate Decision Maker</h3> -->
-				<!-- </div> -->
-				<!-- </li> -->
+
 
 			</ul>
 
@@ -217,13 +161,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 					<h4>Treasurer</h4>
-					<img src="images/banner2.jpg" alt="blog-image" /> <span>Lorem
-						ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus
-						error sit voluptatem , eaque ipsa quae ab illo inventore veritatis
-						et quasi architecto beatae vitae dicta sunt explicabo.accusantium
-						doloremque laudantium, totam rem aperiamconsectetur adipiscing
-						elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-						aliqua.</span>
+
 				</div>
 			</div>
 		</div>
@@ -252,16 +190,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-6 w3_modal_body_left">
 						<img src="images/2.jpg" alt=" " class="img-responsive" />
 					</div>
-					<div class="col-md-6 w3_modal_body_right">
-						<p>
-							Ut enim ad minima veniam, quis nostrum exercitationem ullam
-							corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-							consequatur? Quis autem vel eum iure reprehenderit qui in ea
-							voluptate velit esse quam nihil molestiae consequatur. <i>"
-								Quis autem vel eum iure reprehenderit qui in ea voluptate velit
-								esse quam nihil molestiae consequatur.</i>
-						</p>
-					</div>
+					<div class="col-md-6 w3_modal_body_right"></div>
 					<div class="clearfix"></div>
 				</div>
 				</section>
@@ -465,3 +394,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //here ends scrolling icon -->
 </body>
 </html>
+<%-- <%
+	} else {
+		response.sendRedirect("index.jsp");
+	}
+%> --%>

@@ -1,3 +1,7 @@
+
+								<!-- NO USE BUT DO NOT DELETE -->
+
+
 <%@page import="dao.RegisterDao"%>
 <%@page import="dao.LoginDao"%>
 <jsp:useBean id="login" class="dto.RegisterDto" scope="session"></jsp:useBean>
@@ -8,7 +12,7 @@
 	String value = ld.loginValidate(login);
 	System.out.println(value);
 	
-	if (value.equals("nullify")) 
+	if (value.equals("nullify"))
 	{
 		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 		rd.include(request, response);

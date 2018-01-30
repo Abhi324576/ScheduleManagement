@@ -7,6 +7,9 @@ public class feedbackDto {
 	private String femail;
 	private String fdeptName;
 	private String freview;
+	private String fmessage;
+	private String eid;
+	private String meetingName;
 	public String getFid() {
 		return fid;
 	}
@@ -37,12 +40,42 @@ public class feedbackDto {
 	public void setFreview(String freview) {
 		this.freview = freview;
 	}
+	public String getFmessage() {
+		return fmessage;
+	}
+	public void setFmessage(String fmessage) {
+		this.fmessage = fmessage;
+	}
+	public String getEid() {
+		return eid;
+	}
+	public void setEid(String eid) {
+		this.eid = eid;
+	}
+	public String getMeetingName() {
+		return meetingName;
+	}
+	public void setMeetingName(String meetingName) {
+		this.meetingName = meetingName;
+	}
+	public feedbackDto(String fid, String fname, String femail, String fdeptName, String freview, String fmessage,
+			String eid, String meetingName) {
+		super();
+		this.fid = fid;
+		this.fname = fname;
+		this.femail = femail;
+		this.fdeptName = fdeptName;
+		this.freview = freview;
+		this.fmessage = fmessage;
+		this.eid = eid;
+		this.meetingName = meetingName;
+	}
 	@Override
 	public String toString() {
 		return "feedbackDto [fid=" + fid + ", fname=" + fname + ", femail=" + femail + ", fdeptName=" + fdeptName
-				+ ", freview=" + freview + "]";
+				+ ", freview=" + freview + ", fmessage=" + fmessage + ", eid=" + eid + ", meetingName=" + meetingName
+				+ "]";
 	}
-	
 	
 	
 }

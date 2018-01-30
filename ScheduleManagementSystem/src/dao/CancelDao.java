@@ -20,10 +20,10 @@ public class CancelDao {
 
 		try {
 			Connection con = mcon.getMcon();
-			String q = "delete from Event where meetingName=?";
+			String q = "delete from event where eventId=?";
 			PreparedStatement ps = con.prepareStatement(q);
 			System.out.println(event.getMeetingName());
-			ps.setString(1, event.getMeetingName());
+			ps.setString(1, event.getEventId());
 			ps.execute();
 			valid = true;
 		} catch (SQLException e) {

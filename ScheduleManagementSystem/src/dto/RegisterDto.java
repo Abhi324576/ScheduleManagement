@@ -8,11 +8,12 @@ public class RegisterDto {
 	private String userPosition;
 	private String userDOB;
 	private String userpassword;
+	private int userOTP;
 	
 	
 	
 	public RegisterDto(String status, int userId, String userName, String userEmail, String userPosition, String userDOB,
-			String userpassword) {
+			String userpassword,int userOTP) {
 		super();
 		this.status = status;
 		this.userId = userId;
@@ -21,10 +22,33 @@ public class RegisterDto {
 		this.userPosition = userPosition;
 		this.userDOB = userDOB;
 		this.userpassword = userpassword;
-	
+		this.userOTP = userOTP;
 	}
 	public RegisterDto() {
 		super();
+	}
+	
+	
+	public RegisterDto(int userId, String userName, String userEmail, String userPosition, String userDOB,
+			String userpassword) {
+		super();
+		this.userId = userId;
+		this.userName = userName;
+		this.userEmail = userEmail;
+		this.userPosition = userPosition;
+		this.userDOB = userDOB;
+		this.userpassword = userpassword;
+	
+	}
+	
+	public RegisterDto(String userEmail, String userpassword) {
+		super();
+		this.userEmail = userEmail;
+		this.userpassword = userpassword;
+	}
+	
+	public RegisterDto(String userEmail) {
+		this.userEmail = userEmail;
 	}
 	public int getUserId() {
 		return userId;
@@ -74,6 +98,12 @@ public class RegisterDto {
 		return "RegisterDto [status=" + status + ", userId=" + userId + ", userName=" + userName + ", userEmail="
 				+ userEmail + ", userPosition=" + userPosition + ", userDOB=" + userDOB + ", userpassword="
 				+ userpassword + "]";
+	}
+	public int getUserOTP() {
+		return userOTP;
+	}
+	public void setUserOTP(int userOTP) {
+		this.userOTP = userOTP;
 	}
 	
 	}

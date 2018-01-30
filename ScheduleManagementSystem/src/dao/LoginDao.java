@@ -21,15 +21,16 @@ public class LoginDao {
 		 String position="nullify";
 		try {
 			Connection con = mcon.getMcon();
-			String s = "select posi from register where email=? and pass=md5(?)";
+			String s = "select posi from register where email=? and status='1' and pass=md5(?)";
 			PreparedStatement pst = con.prepareStatement(s);
+			/*System.out.println(register.getUserEmail());*/
 			pst.setString(1, register.getUserEmail());
 			pst.setString(2, register.getUserpassword());
 			ResultSet rs = pst.executeQuery();
 			while (rs.next()) {
 				 position=rs.getString(1);
 			}
-			System.out.println(position);
+			/*System.out.println(position);*/
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -37,4 +38,27 @@ public class LoginDao {
 
 		return position;
 	}
+
+	public String loginValidateIntermeet(RegisterDto rd1) {
+		 String position="nullify";
+			try {
+				Connection con = mcon.getMcon();
+				String s = "select posi from register where email=? and status='1'";
+				PreparedStatement pst = con.prepareStatement(s);
+				System.out.println(rd1.getUserEmail());
+				pst.setString(1, rd1.getUserEmail());
+				ResultSet rs = pst.executeQuery();
+				while (rs.next()) {
+					 position=rs.getString(1);
+				}
+				System.out.println(position);
+
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+
+			return position;
+		}
+
+		
 }

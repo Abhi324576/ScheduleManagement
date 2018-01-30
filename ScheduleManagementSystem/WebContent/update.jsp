@@ -4,9 +4,24 @@
 	pageEncoding="ISO-8859-1"%>
 <jsp:useBean id="event" class="dto.Events"></jsp:useBean>
 <jsp:setProperty property="*" name="event" />
+<%-- <jsp:useBean id="login" class="dto.RegisterDto" scope="session"></jsp:useBean>
+<%
+	if (login != null && login.getUserPosition() != null) {
+%> --%>
 <%
 	UpdateDao ud = new UpdateDao();
 	Events e = ud.show(event);
+	/* String meetingName=request.getParameter("meetingName");
+	
+	String meetingDescription=request.getParameter("meetingDescription");
+	String meetingType=request.getParameter("meetingType");
+	String startTime=request.getParameter("startTime");
+	String date=request.getParameter("date");
+	String meetingOptions=request.getParameter("meetingOptions");
+	String numberOfParticipants=request.getParameter("numberOfParticipants");
+ 	String eventId=request.getParameter("eventId");
+	String emailId=request.getParameter("emailId"); */
+	/* out.write(emailId); */
 %>
 <!DOCTYPE html>
 <html>
@@ -60,7 +75,7 @@ div {
 </script>
 
 <body>
-	<form name="objform" action="Updated.jsp" method="POST">
+	<form name="objform" action="Updated" method="POST">
 		<table align="center">
 
 			<h1 align="center" class="style1" id="header" font>SCHEDULE
@@ -71,19 +86,19 @@ div {
 				<tr>
 					<td>Meeting name</td>
 					<td><input type="text" name="meetingName"
-						value="<%=e.getMeetingName()%>" required /></td>
+						value=<%=e.getMeetingName() %> required /></td>
 				</tr>
 
 				<tr>
 					<td class="style16">Meeting description</td>
 					<td><textarea name="meetingDescription" 
-							value="<%=e.getMeetingDescription()%>" required></textarea></td>
+							value=<%=e.getMeetingDescription() %> required></textarea></td>
 					</p>
 				</tr>
 
 				<tr>
 					<td class="style16" required>Meeting type</td>
-					<td><select name="meetingType" value="<%=e.getMeetingType()%>">
+					<td><select name="meetingType" value=<%=e.getMeetingType() %>>
 							<option>Technical meeting</option>
 							<option>Non-Technical meeting</option>
 					</select></td>
@@ -93,31 +108,29 @@ div {
 				<tr>
 					<td class="style16">Start time</td>
 					<td><input type="time" name="startTime"
-						value="<%=e.getStartTime()%>" required></td>
+						value=<%=e.getStartTime() %> required></td>
 				</tr>
 
 				<tr>
 					<td class="style16">Date<span class="style14"></td>
 					<td><input name="date" type="Date" size="10" maxlength="10"
-						value="<%=e.getDate()%>" required /></td>
+						value=<%=e.getDate() %> required /></td>
 					</span>
 					</p>
 				</tr>
 
 				<tr>
-					<td class="style16" required>Meeting options</td>
-					<td><input name="meetingOptions" type="radio"
-						value="<%=e.getMeetingOptions()%>" /> single <input
-						name="meetingOptions" type="radio"
-						value="<%=e.getMeetingOptions()%>" /> weekly <input
-						name="meetingOptions" type="radio"
-						value="<%=e.getMeetingOptions()%>" /> monthly</td>
+					<td class="style16" required="">Meeting options</td>
+					<td>
+						<input name="meetingOptions" type="radio" value="Single" /> Single 
+						<input name="meetingOptions" type="radio" value=Weekly /> Weekly 
+						<input name="meetingOptions" type="radio" value=Monthly /> Monthly
+					</td>
 				</tr>
-
 				<tr>
 					<td class="style16">Number of participants</td>
 					<td><input name="numberOfParticipants" type="text"
-						maxlength="100" value="<%=e.getNumberOfParticipants()%>" required />
+						maxlength="100" value=<%=e.getNumberOfParticipants() %> required />
 					</td>
 
 				</tr>
@@ -125,14 +138,14 @@ div {
 				<tr>
 					<td class="style14">Event ID</td>
 					<td><input name="eventId" type="text" size="10" maxlength="10"
-						pattern="[A-Za-z0-9]{10}" readonly value="<%=e.getEventId()%>"
+						pattern="[A-Za-z0-9]{10}" readonly value=<%=e.getEventId() %>
 						required /></td>
 				</tr>
 
 				<tr>
 					<td class="style14">E-mail ID</td>
 					<td><input type="text" name="emailId"
-						value="<%=e.getEmailId()%>" required /></td>
+						readonly value=<%=e.getEmailId() %> required /></td>
 				</tr>
 
 				<tr>
@@ -146,3 +159,8 @@ div {
 	</form>
 </body>
 </html>
+<%-- <%
+	} else {
+		response.sendRedirect("index.jsp");
+	}
+%> --%>

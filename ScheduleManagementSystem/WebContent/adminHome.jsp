@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%-- <jsp:useBean id="login" class="dto.RegisterDto" scope="session"></jsp:useBean>
+<%
+	if (login != null && login.getUserPosition() != null) {
+%> --%>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -13,6 +19,7 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript">
 	
+	
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
 		}, false);
@@ -21,6 +28,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			window.scrollTo(0, 1);
 		}
 	
+
 </script>
 <!-- //custom-theme -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css"
@@ -52,15 +60,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					class="icon-bar"></span>
 			</button>
 			<h1>
-				<a class="navbar-brand" href="index.html"><i
+				<a class="navbar-brand" href="adminHome.jsp"><i
 					class="fa fa-crosshairs" aria-hidden="true"></i> Schedule
 					Management System</a>
 			</h1>
 
 		</div>
 		<ul class="agile_forms">
-			<li><a href="logout.jsp">
-					Log Out</a></li>
+			<li><a href="logout.jsp"> Log Out</a></li>
 		</ul>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-right"
@@ -69,12 +76,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="adminHome.jsp"
 					class="hvr-underline-from-center">Home</a></li>
-				<li><a href="adminPage.jsp" class="hvr-underline-from-center" target="_blank">Events</a></li>
-				<li><a href="siteUnderMaintainance.jsp" class="hvr-underline-from-center">Holiday-List</a></li>
-				<li><a href="siteUnderMaintainance.jsp" class="hvr-underline-from-center">Notification</a></li>
+				<li><a href="adminPage.jsp" class="hvr-underline-from-center"
+					target="_blank">Events</a></li>
+				<li><a href="indexCalendarUI.jsp"
+					class="hvr-underline-from-center">Holiday-List</a></li>
+				<li><a href="EmailForm.jsp" class="hvr-underline-from-center">Notification</a></li>
 				<li><a href="approve.jsp" class="hvr-underline-from-center">Approve-User</a></li>
-				<li><a href="siteUnderMaintainance.html" class="hvr-underline-from-center">Reports</a></li>
-				<li><a href="siteUnderMaintainance.html" class="hvr-underline-from-center">Contact</a></li>
+				<li><a href="generateReports.jsp"	class="hvr-underline-from-center">Reports</a></li>
+				<li><a href="siteUnderMaintainance.jsp"
+					class="hvr-underline-from-center">Contact</a></li>
 			</ul>
 			</nav>
 
@@ -83,43 +93,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		<div class="clearfix"></div>
 	</div>
-	<!-- Modal1 -->
-	<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
-		<div class="modal-dialog">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-
-					<div class="signin-form profile">
-						<h3 class="agileinfo_sign">Sign In</h3>
-						<div class="login-form">
-							<form action="#" method="post">
-								<input type="email" name="email" placeholder="E-mail"
-									required=""> <input type="password" name="password"
-									placeholder="Password" required="">
-								<div class="tp">
-									<input type="submit" value="Sign In">
-								</div>
-							</form>
-						</div>
-						<div class="login-social-grids">
-							<ul>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-rss"></i></a></li>
-							</ul>
-						</div>
-						<p>
-							<a href="#" data-toggle="modal" data-target="#myModal3">
-								Don't have an account?</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //Modal1 -->
 	<!-- Modal2 -->
 	<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
 		<div class="modal-dialog">
@@ -441,3 +414,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //here ends scrolling icon -->
 </body>
 </html>
+<%-- <%
+	} else {
+		response.sendRedirect("index.jsp");
+	}
+%> --%>

@@ -28,6 +28,9 @@ public class Events {
 		this.eventId = eventId;
 		this.emailId = emailId;
 	}
+	public Events(String eventId) {
+		this.eventId = eventId;
+	}
 	public String getMeetingName() {
 		return meetingName;
 	}

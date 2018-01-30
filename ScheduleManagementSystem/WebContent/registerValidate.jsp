@@ -1,3 +1,6 @@
+
+							<!-- NO USE BUT DO NOT DELETE -->
+
 <%@page import="dao.RegisterDao"%>
 <jsp:useBean id="register" class="dto.RegisterDto" scope="session"></jsp:useBean>
 <jsp:setProperty property="*" name="register"></jsp:setProperty>

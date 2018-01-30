@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 4.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="feedback" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Triumph"/>
+	<queryString language="SQL">
+		<![CDATA[select eid,count(freview),freview from feedback where eid in (select distinct(eid) from feedback) group by freview]]>
+	</queryString>
+	<field name="eid" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="eid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="feedback"/>
+	</field>
+	<field name="count(freview)" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="count(freview)"/>
+	</field>
+	<field name="freview" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="freview"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="feedback"/>
+	</field>
+	<group name="eid">
+		<groupExpression><![CDATA[$F{eid}]]></groupExpression>
+	</group>
+	<group name="count(freview)">
+		<groupExpression><![CDATA[$F{count(freview)}]]></groupExpression>
+	</group>
+	<group name="freview">
+		<groupExpression><![CDATA[$F{freview}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="799a882d-16c6-4d00-ad4d-7c3dfb0a0261"/>
+				</reportElement>
+				<text><![CDATA[eid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="0" width="100" height="30">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="95bb9881-b8d3-4f55-a1c4-7d7bf9021b40"/>
+				</reportElement>
+				<text><![CDATA[count(freview)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="387" y="0" width="100" height="30">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cc97827d-0382-4e1c-bd85-deb03a6a531c"/>
+				</reportElement>
+				<text><![CDATA[freview]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="799a882d-16c6-4d00-ad4d-7c3dfb0a0261"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{eid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="191" y="20" width="100" height="30">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="95bb9881-b8d3-4f55-a1c4-7d7bf9021b40"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{count(freview)}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="387" y="30" width="100" height="30">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cc97827d-0382-4e1c-bd85-deb03a6a531c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{freview}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

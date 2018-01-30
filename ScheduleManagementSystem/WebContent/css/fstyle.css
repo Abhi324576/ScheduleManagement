@@ -144,7 +144,7 @@ label.header {
     margin-bottom: 12px;
 	
 }
-input#name, input#email, input#orgn, textarea#message {
+input#name, input#email, input#orgn, input#meetingName, textarea#message {
     border: none;
     color: #fff;
     text-align: justify;
@@ -155,7 +155,7 @@ input#name, input#email, input#orgn, textarea#message {
     background-color:rgba(0, 0, 0, 0.38);
   
 }
-input#name,input#email,input#orgn {
+input#name,input#email,input#orgn, input#meetingName {
 	height:50px;
 	padding:0 15px;
 	width:95.2%;
@@ -385,7 +385,7 @@ p.copyright a:hover {
 }
 
 @media (max-width:1440px) {
-	input#name, input#email, input#orgn {
+	input#name, input#email, input#orgn, input#meetingName {
     width: 94.8%;
 }
 textarea#message{
@@ -394,7 +394,7 @@ textarea#message{
 }
 
 @media (max-width: 1366px) {
-	input#name, input#email, input#orgn {
+	input#name, input#email, input#orgn, input#meetingName {
     width: 94.3%;
 }
 textarea#message{
@@ -406,7 +406,7 @@ textarea#message{
 .content-w3ls {
     width: 45%;
 }
-	input#name, input#email, input#orgn {
+	input#name, input#email, input#orgn, input#meetingName {
     width: 94.8%;
 }
 textarea#message{
@@ -425,7 +425,7 @@ textarea#message{
 }
 
 @media (max-width: 1024px) {
-input#name, input#email, input#orgn {
+input#name, input#email, input#orgn, input#meetingName {
     width: 94.5%;
 }
 textarea#message{
@@ -444,7 +444,7 @@ textarea#message{
 .content-w3ls {
     width: 45%;
 }
-input#name, input#email, input#orgn {
+input#name, input#email, input#orgn, input#meetingName {
     width: 91.5%;
 }
 textarea#message{
@@ -460,7 +460,7 @@ h1.header-w3ls {
     width: 68%;
     padding: 44px 40px;
 }
-input#name, input#email, input#orgn {
+input#name, input#email, input#orgn ,input#meetingName{
     width: 94%;
 }
 textarea#message{
@@ -472,7 +472,7 @@ textarea#message{
 p {
     font-size: 15px;
 }
-input#name, input#email, input#orgn {
+input#name, input#email, input#orgn,input#meetingName {
     width: 93.8%;
 }
 textarea#message{
@@ -481,7 +481,7 @@ textarea#message{
 }
 
 @media (max-width: 667px) {
-input#name, input#email, input#orgn {
+input#name, input#email, input#orgn,input#meetingName {
     width: 93.1%;
 }
 textarea#message{
@@ -493,7 +493,7 @@ textarea#message{
 h1.header-w3ls {
     font-size: 34px;
 }
-input#name, input#email, input#orgn {
+input#name, input#email, input#orgn,input#meetingName {
     width: 92.8%;
 }
 textarea#message{
@@ -511,10 +511,10 @@ h2 {
 label.header {
     font-size: 17px;
 }
-input#name, input#email, input#orgn, textarea#message {
+input#name, input#email, input#orgn, input#meetingName,textarea#message {
     font-size: 15px;
 }
-input#name, input#email, input#orgn {
+input#name, input#email, input#orgn,input#meetingName {
     height: 45px;
     padding: 0 12px;
 }
@@ -531,7 +531,7 @@ p.copyright {
     font-size: 15px;
     padding-bottom: 0;
 }
-input#name, input#email, input#orgn {
+input#name, input#email, input#orgn, input#meetingName {
     width: 94%;
 }
 textarea#message{
@@ -543,7 +543,7 @@ textarea#message{
 h2 {
     font-size: 25px;
 }
-input#name, input#email, input#orgn {
+input#name, input#email, input#orgn, input#meetingName {
     width: 93.6%;
 }
 textarea#message{
@@ -566,7 +566,7 @@ p {
     font-size: 15px;
     line-height: 25px;
 }
-input#name, input#email, input#orgn {
+input#name, input#email, input#orgn, input#meetingName {
     width: 93%;
 }
 textarea#message{
@@ -588,7 +588,7 @@ label.rating {
     width: 34%;
 	height:40px;
 }
-input#name, input#email, input#orgn {
+input#name, input#email, input#orgn, input#meetingName {
     width: 92%;
 }
 textarea#message{
@@ -606,7 +606,7 @@ h2 {
 p.copyright {
     padding: 0 10px;
 }
-input#name, input#email, input#orgn {
+input#name, input#email, input#orgn, input#meetingName {
     width: 91.5%;
 }
 textarea#message{
@@ -618,7 +618,7 @@ textarea#message{
 p {
     font-size: 14px;
 }
-input#name, input#email, input#orgn {
+input#name, input#email, input#orgn,input#meetingName {
     width: 91%;
 }
 textarea#message{
@@ -646,7 +646,7 @@ label.enquiry {
     font-size: 15px;
 	margin-bottom:8px;
 }
-input#name, input#email, input#orgn {
+input#name, input#email, input#orgn,input#meetingName {
     width: 90.4%;
 }
 textarea#message{
